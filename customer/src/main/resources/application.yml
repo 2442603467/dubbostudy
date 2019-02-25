@@ -1,0 +1,15 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: customer
+  dubbo:
+    registry:
+     address: zookeeper://127.0.0.1:2181
+#    consumer:
+#      check: false
+    protocol:
+      name: dubbo
+#    scan: com.dubboStudy.customer.controller
