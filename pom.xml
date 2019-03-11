@@ -68,6 +68,11 @@
                 <version>0.3</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+            </dependency>
+
             <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
             <dependency>
                 <groupId>org.apache.curator</groupId>
@@ -80,6 +85,26 @@
                 <artifactId>zookeeper</artifactId>
                 <version>3.4.8</version>
                 <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
             </dependency>
         </dependencies>
 

@@ -1,10 +1,11 @@
 package com.dubboStudy.customer.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.dubbostudy.api.HiService;
+import com.dubboStudy.customer.message.Sender;
+import com.dubbostudy.api.service.HiService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,14 +18,14 @@ public class HiController {
     @Reference(version = "1.0.0")
     private HiService hiService;
 
+    @Autowired
+    private Sender sender;
+
     @GetMapping(value = "/dubbo/hi/{message}")
     public String sayHello(@PathVariable String message){
         String result = hiService.Hi(message);
+        sender.send(message);
         return result;
     }
 
-    @GetMapping(value = "/dubbo/hhh")
-    public String sayHhh(){
-        return "jjjk";
-    }
 }

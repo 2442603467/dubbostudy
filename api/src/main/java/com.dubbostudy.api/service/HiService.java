@@ -1,4 +1,4 @@
-package com.dubbostudy.api;
+package com.dubbostudy.api.service;
 
 /**
  * @Author by ydj

@@ -13,4 +13,37 @@ spring:
       name: dubbo
       port: 20880
       status: server
+  rabbitmq:
+    host: 127.0.0.1
+    port: 15672
+    password: guest
+    username: guest
+    virtual-host: /
+    publisher-confirms: false
+  redis:
+    host: 127.0.0.1
+    database: 0
+    port: 6379
+    sentinel:
+      nodes: 127.0.0.1:27002,127.0.0.1:27003,127.0.0.1:27004
+      master: mymaster
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 9
+        max-wait: 1ms
+    password: 123456
+  kafka:
+    producer:
+      bootstrap-servers: 127.0.0.1:9092
+      retries: 1
+      batch-size: 16384
+      buffer-memory: 33554432
+      properties:
+        max:
+          request:
+            size:2097152
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
   #  scan: com.dubboStudy.provider.serivce

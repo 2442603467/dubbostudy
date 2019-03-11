@@ -12,4 +12,15 @@ spring:
 #      check: false
     protocol:
       name: dubbo
+  kafka:
+    consumer:
+      bootstrap-servers: 127.0.0.1:9092
+      group-id: 0
+      auto-offset-reset: earliest
+      auto-commit-interval: 100
+      properties:
+        max:
+          partition:
+            fetch:
+              bytes: 2097152
 #    scan: com.dubboStudy.customer.controller
