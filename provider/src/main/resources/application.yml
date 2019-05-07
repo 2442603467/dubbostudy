@@ -15,7 +15,7 @@ spring:
       status: server
   rabbitmq:
     host: 127.0.0.1
-    port: 15672
+    port: 5672
     password: guest
     username: guest
     virtual-host: /
@@ -43,7 +43,7 @@ spring:
       properties:
         max:
           request:
-            size:2097152
+            size: 2097152
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
   #  scan: com.dubboStudy.provider.serivce

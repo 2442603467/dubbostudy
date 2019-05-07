@@ -2,8 +2,6 @@ package com.dubboStudy.provider.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.dubbostudy.api.service.HiService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 /**
