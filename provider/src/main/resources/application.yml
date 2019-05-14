@@ -24,9 +24,6 @@ spring:
     host: 127.0.0.1
     database: 0
     port: 6379
-    sentinel:
-      nodes: 127.0.0.1:27002,127.0.0.1:27003,127.0.0.1:27004
-      master: mymaster
     jedis:
       pool:
         max-active: 8
