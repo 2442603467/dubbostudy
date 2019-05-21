@@ -15,7 +15,7 @@ public class RabbitMqConfig {
     @Bean
     public Queue immediateQueue(){
         //第一个字段是队列名，第二个是是否持久化
-        return new Queue("immediate_queue_test11",true);
+        return new Queue("immediate_queue_test1",true);
     }
 
     //创建直系的Exchange

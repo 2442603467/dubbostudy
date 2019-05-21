@@ -9,9 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.provider</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.dubbo</groupId>
+    <artifactId>provider</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>provider</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,6 +26,11 @@
             <artifactId>api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -35,5 +41,30 @@
             </plugin>
         </plugins>
     </build>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>dev</id>-->
+            <!--<properties>-->
+                <!--&lt;!&ndash; 环境标识，需要与配置文件的名称相对应 &ndash;&gt;-->
+                <!--<activatedProperties>application.yml</activatedProperties>-->
+            <!--</properties>-->
+            <!--<activation>-->
+                <!--&lt;!&ndash; 默认环境 &ndash;&gt;-->
+                <!--<activeByDefault>true</activeByDefault>-->
+            <!--</activation>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>alpha</id>-->
+            <!--<properties>-->
+                <!--<activatedProperties>alpha</activatedProperties>-->
+            <!--</properties>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>prod</id>-->
+            <!--<properties>-->
+                <!--<activatedProperties>prod</activatedProperties>-->
+            <!--</properties>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 
 </project>

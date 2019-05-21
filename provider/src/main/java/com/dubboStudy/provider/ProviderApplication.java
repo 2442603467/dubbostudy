@@ -3,7 +3,9 @@ package com.dubboStudy.provider;
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -14,7 +16,7 @@ import redis.clients.jedis.JedisPoolConfig;
  **/
 @SpringBootApplication
 @EnableDubboConfiguration
-public class ProviderApplication {
+public class ProviderApplication extends SpringBootServletInitializer{
 
     @Bean
     public JedisPool getJedisPool(){
@@ -22,7 +24,12 @@ public class ProviderApplication {
         return pool;
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(ProviderApplication.class,args);
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder){
+        System.setProperty("dubbo.application.logger","log4j");
+        return builder.sources(ProviderApplication.class);
     }
+//    public static void main(String[] args) {
+//        SpringApplication.run(ProviderApplication.class,args);
+//    }
 }

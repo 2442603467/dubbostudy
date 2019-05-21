@@ -11,7 +11,7 @@ spring:
       address: zookeeper://127.0.0.1:2181
     protocol:
       name: dubbo
-      port: 20880
+      port: 20881
       status: server
   rabbitmq:
     host: 127.0.0.1
@@ -43,4 +43,3 @@ spring:
             size: 2097152
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
-  #  scan: com.dubboStudy.provider.serivce

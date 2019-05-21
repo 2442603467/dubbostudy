@@ -8,12 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api" />
         <module name="customer" />
+        <module name="demo (1) (com.customer)" />
+        <module name="demo (2) (com.provider)" />
         <module name="provider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api" target="1.5" />
       <module name="customer" target="1.5" />
+      <module name="demo (1) (com.customer)" target="1.5" />
+      <module name="demo (2) (com.provider)" target="1.5" />
       <module name="dubbostudy" target="1.5" />
       <module name="provider" target="1.5" />
     </bytecodeTargetLevel>
